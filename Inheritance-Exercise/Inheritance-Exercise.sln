@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Person", "Person\Person.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zoo", "Zoo\Zoo.csproj", "{401BE0A8-3983-4599-9EAC-0FDE4DA238D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayersAndMonsters", "PlayersAndMonsters\PlayersAndMonsters.csproj", "{D551716F-7B08-4334-A7BC-F56D07CCB796}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{401BE0A8-3983-4599-9EAC-0FDE4DA238D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{401BE0A8-3983-4599-9EAC-0FDE4DA238D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{401BE0A8-3983-4599-9EAC-0FDE4DA238D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D551716F-7B08-4334-A7BC-F56D07CCB796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D551716F-7B08-4334-A7BC-F56D07CCB796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D551716F-7B08-4334-A7BC-F56D07CCB796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D551716F-7B08-4334-A7BC-F56D07CCB796}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
