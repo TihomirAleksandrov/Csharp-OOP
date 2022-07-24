@@ -8,7 +8,7 @@ namespace Vehicles
     {
         private const double additionalConsumption = 1.6;
         
-        public Truck(double fuelQuantity, double consumption) : base(fuelQuantity, consumption)
+        public Truck(double fuelQuantity, double consumption, double tankCapacity) : base(fuelQuantity, consumption, tankCapacity)
         {
 
         }
@@ -29,7 +29,20 @@ namespace Vehicles
 
         public override void Refuel(double liters)
         {
-            this.FuelQuantity += (liters * 0.95);
+            double totalFuel = liters + this.FuelQuantity;
+
+            if (liters <= 0)
+            {
+                throw new ArgumentException("Fuel must be a positive number");
+            }
+            else if (totalFuel > this.TankCapacity)
+            {
+                throw new ArgumentException($"Cannot fit {liters} fuel in the tank");
+            }
+            else
+            {
+                this.FuelQuantity += (liters * 0.95);
+            }
         }
     }
 }

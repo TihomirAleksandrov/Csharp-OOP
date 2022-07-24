@@ -8,11 +8,13 @@ namespace Vehicles
     {
         private double fuelQuantity;
         private double fuelConsumption;
+        private double tankCapacity;
 
-        internal Vehicle(double fuelQuantity, double consumption)
+        internal Vehicle(double fuelQuantity, double consumption, double tankCapacity)
         {
             FuelQuantity = fuelQuantity;
             FuelConsumption = consumption;
+            TankCapacity = tankCapacity;
         }
 
         public double FuelQuantity
@@ -25,6 +27,19 @@ namespace Vehicles
         {
             get => fuelConsumption;
             set => fuelConsumption = value;
+        }
+
+        public double TankCapacity
+        {
+            get => tankCapacity;
+            set
+            {
+                if (this.fuelQuantity > value)
+                {
+                    this.fuelQuantity = 0;
+                }
+                tankCapacity = value;
+            }
         }
 
         public abstract string Drive(double distance);

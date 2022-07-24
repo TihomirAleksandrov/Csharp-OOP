@@ -4,25 +4,40 @@ using System.Text;
 
 namespace Vehicles
 {
-    internal class Car : Vehicle
+    internal class Bus : Vehicle
     {
-        private const double additionalConsumption = 0.9;
-        public Car(double fuelQuantity, double consumption, double tankCapacity) : base(fuelQuantity, consumption, tankCapacity)
+        private const double additionalConsumption = 1.4;
+        
+        public Bus(double fuelQuantity, double consumption, double tankCapacity) : base(fuelQuantity, consumption, tankCapacity)
         {
 
         }
 
         public override string Drive(double distance)
         {
-           double fuelNeeded = (additionalConsumption + this.FuelConsumption) * distance;
+            double fuelNeeded = (additionalConsumption + this.FuelConsumption) * distance;
             if (fuelNeeded > this.FuelQuantity)
             {
-                return "Car needs refueling";
+                return "Bus needs refueling";
             }
             else
             {
                 this.FuelQuantity -= fuelNeeded;
-                return $"Car travelled {distance} km";
+                return $"Bus travelled {distance} km";
+            }
+        }
+
+        public string DriveEmpty(double distance)
+        {
+            double fuelNeeded = this.FuelConsumption * distance;
+            if (fuelNeeded > this.FuelQuantity)
+            {
+                return "Bus needs refueling";
+            }
+            else
+            {
+                this.FuelQuantity -= fuelNeeded;
+                return $"Bus travelled {distance} km";
             }
         }
 
