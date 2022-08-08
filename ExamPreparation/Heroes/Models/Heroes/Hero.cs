@@ -3,7 +3,7 @@ using System;
 
 namespace Heroes.Models.Heroes
 {
-    public class Hero : IHero
+    public abstract class Hero : IHero
     {
         private string name;
         private int health;
@@ -73,28 +73,28 @@ namespace Heroes.Models.Heroes
 
         public void AddWeapon(IWeapon weapon)
         {
-            this.weapon = weapon;
+            Weapon = weapon;
         }
 
         public void TakeDamage(int points)
         {
-            if (Armour > points)
+            if (this.armour > points)
             {
-                Armour -= points;
+                this.armour -= points;
             }
-            else if (Armour > 0)
+            else if (this.armour > 0)
             {
-                points -= Armour;
-                Armour = 0;
+                points -= this.armour;
+                this.armour = 0;
             }
 
-            if (Health > points && Armour == 0)
+            if (this.health > points && this.armour == 0)
             {
-                Health -= points;
+                this.health -= points;
             }
-            else if (health <= points && Armour == 0)
+            else if (this.health <= points && this.armour == 0)
             {
-                Health = 0;
+                this.health = 0;
             }
         }
     }
