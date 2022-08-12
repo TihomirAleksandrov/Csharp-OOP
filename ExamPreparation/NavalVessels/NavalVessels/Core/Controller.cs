@@ -73,7 +73,7 @@ namespace NavalVessels.Core
                 attackingVessel.Captain.IncreaseCombatExperience();
                 defendingVessel.Captain.IncreaseCombatExperience();
 
-                return String.Format(OutputMessages.SuccessfullyAttackVessel, attackingVesselName, defendingVesselName, defendingVessel.ArmorThickness);
+                return String.Format(OutputMessages.SuccessfullyAttackVessel, defendingVesselName, attackingVesselName, defendingVessel.ArmorThickness);
             }
         }
 
