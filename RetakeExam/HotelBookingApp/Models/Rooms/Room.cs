@@ -8,7 +8,7 @@ namespace BookingApp.Models.Rooms
 {
     public abstract class Room : IRoom
     {
-        private double pricePerNight;
+        private double pricePerNight = 0;
         public Room(int bedCapacity)
         {
             BedCapacity = bedCapacity;

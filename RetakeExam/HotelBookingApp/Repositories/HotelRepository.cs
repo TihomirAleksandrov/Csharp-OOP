@@ -1,4 +1,5 @@
-﻿using BookingApp.Models.Hotels.Contacts;
+﻿using BookingApp.Models.Hotels;
+using BookingApp.Models.Hotels.Contacts;
 using BookingApp.Repositories.Contracts;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ namespace BookingApp.Repositories
 {
     public class HotelRepository : IRepository<IHotel>
     {
+        internal Hotel firs;
         private List<IHotel> hotels;
 
         public HotelRepository()
